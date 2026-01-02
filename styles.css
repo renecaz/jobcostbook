@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0e1117;
+  color: #eaeaea;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #161b22;
+}
+
+.logo {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+}
+
+.card {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn.ghost {
+  background: #222;
+  color: #ccc;
+}
+
+.btn.danger {
+  background: #dc2626;
+  color: white;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.jobs div {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.material-row,
+.worker-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.summary {
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JobCostBook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">JCB</div>
+      <div>
+        <div class="title">JobCostBook</div>
+        <div class="subtitle">Materials • Labor • Timeline • Profit</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="btnExport" class="btn ghost">Export</button>
+      <label class="btn ghost file">
+        Import<input id="fileImport" type="file" accept="application/json" />
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- JOB LIST -->
+    <section id="viewJobs" class="card">
+      <div class="row between">
+        <h2>Jobs</h2>
+        <button id="btnNewJob" class="btn primary">+ New Job</button>
+      </div>
+
+      <div id="jobsEmpty" class="empty">
+        No jobs yet. Tap <b>New Job</b> to start.
+      </div>
+
+      <div id="jobsList" class="jobs"></div>
+    </section>
+
+    <!-- JOB DETAIL -->
+    <section id="viewJob" class="card hidden">
+      <div class="row between">
+        <button id="btnBack" class="btn ghost">← Back</button>
+        <button id="btnDeleteJob" class="btn danger">Delete Job</button>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label>Job Name</label>
+          <input id="jobName" type="text" />
+        </div>
+        <div class="field">
+          <label>Start Date</label>
+          <input id="jobStart" type="date" />
+        </div>
+        <div class="field">
+          <label>End Date</label>
+          <input id="jobEnd" type="date" />
+        </div>
+        <div class="field span2">
+          <label>Timeline Notes</label>
+          <input id="jobTimelineNotes" type="text" placeholder="e.g. 2 weeks total" />
+        </div>
+      </div>
+
+      <hr />
+
+      <h3>Materials</h3>
+      <button id="btnAddMaterial" class="btn ghost">+ Add Material</button>
+      <div id="materialsBody"></div>
+      <div class="row between">
+        <strong>Materials Total</strong>
+        <span id="materialsTotal">$0.00</span>
+      </div>
+
+      <hr />
+
+      <h3>Labor</h3>
+      <div class="grid">
+        <div class="field">
+          <label>Hours</label>
+          <input id="laborHours" type="number" step="0.25" />
+        </div>
+        <div class="field">
+          <label>Rate ($/hr)</label>
+          <input id="laborRate" type="number" step="0.01" />
+        </div>
+      </div>
+
+      <hr />
+
+      <h3>Workers Paid</h3>
+      <button id="btnAddWorker" class="btn ghost">+ Add Worker</button>
+      <div id="workersBody"></div>
+
+      <hr />
+
+      <h3>Customer Price</h3>
+      <input id="customerPrice" type="number" step="0.01" />
+
+      <hr />
+
+      <h2>Summary</h2>
+      <div class="summary">
+        <div>Total Cost: <span id="sumCost">$0.00</span></div>
+        <div>Profit: <span id="sumProfit">$0.00</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
